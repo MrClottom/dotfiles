@@ -1,0 +1,113 @@
+snippet .then
+.then($1 => {
+$0
+})
+.catch(err => {
+
+})
+endsnippet
+
+snippet c
+console.log('${1:log}: ', $1)$0
+endsnippet
+
+snippet cj
+console.log('${1:log}: ', JSON.stringify($1, null, 2))$0
+endsnippet
+
+snippet co
+console.log('$1')
+endsnippet
+
+snippet try
+try {
+  $0
+} catch (err) {
+
+}
+endsnippet
+
+snippet f
+function $1 ($2) {
+  $0
+}
+endsnippet
+
+snippet af
+async function $1 ($2) {
+  $0
+}
+endsnippet
+
+snippet ef
+export function $1 ($2) {
+  $0
+}
+endsnippet
+
+snippet ed
+export default {
+  $0
+}
+endsnippet
+
+
+snippet edf
+export default function ($1) {
+  $0
+}
+endsnippet
+
+snippet edaf
+export default async function ($1) {
+  $0
+}
+endsnippet
+
+snippet r
+const $1 = require('$2')$0
+endsnippet
+
+snippet m
+module.exports = $0
+endsnippet
+
+snippet if
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ife
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+snippet ifl
+if ($1) {
+	$2
+} else if ($3) {
+	$4
+}
+endsnippet
+
+snippet ifle
+if ($1) {
+	$2
+} else if ($3) {
+	$4
+} else {
+	$5
+}
+endsnippet
+
+snippet :$
+$1: '\$$1'$0
+endsnippet
+
+snippet $:
+\$$1: $1$0
+endsnippet

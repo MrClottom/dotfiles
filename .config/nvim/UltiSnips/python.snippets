@@ -1,0 +1,54 @@
+snippet p
+print('$1:', $1)
+endsnippet
+
+snippet pr
+print('$0')
+endsnippet
+
+snippet pn
+print('$1:', $1, sep='\n')
+endsnippet
+
+snippet pf
+print('$1(\'{}\')'.format(($2)), $1($2))
+endsnippet
+
+snippet c
+class $1:
+
+	def __init__(self$2):
+		$3
+endsnippet
+
+snippet f
+def $1(self$2):
+	$3
+endsnippet
+
+snippet ex
+class $0(Exception): pass
+endsnippet
+
+snippet m
+if __name__ == '__main__':
+	$0
+endsnippet
+
+snippet s
+self.$1 = $1
+endsnippet
+
+snippet prp
+@property
+def $1(self):
+	return self.__$1
+endsnippet
+
+snippet sm
+@staticmethod
+endsnippet
+
+snippet t
+self._$1 = $1(self)
+endsnippet
