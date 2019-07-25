@@ -1,0 +1,12 @@
+/*
+!.config/
+.config/*
+!.config/nvim/
+.config/nvim/*
+!.config/nvim/UltiSnips/
+!.config/nvim/init.vim
+
+
+!.gitignore
+!.jupyter/
+!.zshrc
