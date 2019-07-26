@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/philippe/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -10,7 +10,7 @@ export ZSH="/home/philippe/.oh-my-zsh"
 ZSH_THEME="agnoster"
 
 # autojump
-[[ -s /home/philippe/.autojump/etc/profile.d/autojump.sh ]] && source /home/philippe/.autojump/etc/profile.d/autojump.sh
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
 # Set list of themes to load
@@ -108,8 +108,8 @@ alias piins="pip3 install"
 alias piins2="pip install"
 alias py='python3.6'
 alias ipynb='python3 ~/Documents/Programming/Python/jupyter-notebooks/pyToJyp.py'
-alias bf='python3 /home/philippe/Documents/Programming/Python/Misc/Brainfuck/bf.py'
-alias uu='sudo touch /usr/lib/python3.6/myutil/lol.txt; sudo rm -r /usr/lib/python3.6/myutil/*; sudo cp /home/philippe/Documents/Programming/Python/Misc/my\ util\ lib/* -r /usr/lib/python3.6/myutil'
+alias bf='python3 ~/Documents/Programming/Python/Misc/Brainfuck/bf.py'
+alias uu='sudo touch $(cat .main-python-dir)/myutil/lol.txt; sudo rm -r $(cat .main-python-dir)/myutil/*; sudo cp ~/Documents/Programming/Python/Misc/my\ util\ lib/* -r $(cat .main-python-dir)/myutil'
 alias dco='docker-compose'
 alias nv='nordvpn'
 alias sfml-compile='echo "g++ -c main.cpp -o compiled/main.o; g++ compiled/main.o -o compiled/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"'

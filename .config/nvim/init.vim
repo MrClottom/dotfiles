@@ -104,7 +104,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set undofile
-set undodir=/home/philippe/.config/nvim/.vimundo
+set undodir=~/.config/nvim/.vimundo
 set ignorecase
 set smartcase
 " find and replace in visually selected
