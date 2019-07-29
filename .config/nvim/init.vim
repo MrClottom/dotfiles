@@ -90,7 +90,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " linting
 let g:ale_fixers = {
-\  'javascript': ['eslint', 'prettier'],
+\  'javascript': [ 'prettier', 'eslint'],
 \  'python': ['autopep8']
 \}
 let g:ale_fix_on_save = 1
