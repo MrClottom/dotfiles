@@ -51,3 +51,11 @@ endsnippet
 snippet t
 self._$1 = $1(self)
 endsnippet
+
+snippet _s
+def __str__(self):
+	return ''
+
+def __repr__(self):
+	return self.__str__()
+endsnippet
