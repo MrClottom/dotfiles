@@ -2,8 +2,11 @@
 !.config/
 .config/*
 !.config/i3blocks
+!.config/i3-regolith
 !.config/nvim/
 .config/nvim/*
+.config/i3-regolith/*
+!.config/i3-regolith/config
 !.config/nvim/UltiSnips/
 !.config/nvim/init.vim
 
