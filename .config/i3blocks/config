@@ -1,0 +1,27 @@
+[bandwidth]
+command=~/.config/i3blocks/bandwidth3/bandwidth3
+interval=persist
+markup=pango
+
+[cpu_usage]
+label=
+command=~/.config/i3blocks/cpu_usage/cpu_usage
+interval=1
+#min_width=CPU:100.00%
+separator=true
+
+[memory]
+label=
+separator=false
+interval=1
+command=~/.config/i3blocks/memory/memory
+
+[battery2]
+command=~/.config/i3blocks/battery2/battery2
+markup=pango
+interval=5
+
+[time]
+command= date '+%d.%m.%Y %H:%M'
+label=
+interval=1

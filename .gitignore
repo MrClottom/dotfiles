@@ -1,6 +1,7 @@
 /*
 !.config/
 .config/*
+!.config/i3blocks
 !.config/nvim/
 .config/nvim/*
 !.config/nvim/UltiSnips/
