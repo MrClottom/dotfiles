@@ -59,6 +59,10 @@ Plug 'vim-scripts/Tabmerge' " merges vim tabs
 " git
 Plug 'tpope/vim-fugitive'
 
+
+" markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 call plug#end()
 
 " autocomplete
@@ -135,6 +139,11 @@ let g:NERDTreeExtensionHighlightColor = {}
 let g:NERDTreeExtensionHighlightColor['vue'] = '3AFFDB'
 nnoremap <Leader>cl :set background=light<CR>
 nnoremap <Leader>cd :set background=dark<CR>
+
+" markdown
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1
+
 
 " trailing whitespaces
 set list listchars=tab:>\ ,trail:-,eol:↵
