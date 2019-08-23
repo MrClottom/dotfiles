@@ -16,11 +16,6 @@ separator=false
 interval=1
 command=~/.config/i3blocks/memory/memory
 
-[battery2]
-command=~/.config/i3blocks/battery2/battery2
-markup=pango
-interval=5
-
 [time]
 command= date '+%d.%m.%Y %H:%M'
 label=
