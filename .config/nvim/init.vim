@@ -81,7 +81,7 @@ let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 
-let g:closetag_filenames = '*.html, *.xhtml, *.xml, *.phtml, *.js, *.vue, *.py'
+let g:closetag_filenames = '*.html, *.xhtml, *.xml, *.phtml, *.js, *.vue, *.py, *.md'
 autocmd FileType riot call tern#Enable()
 autocmd FileType riot setlocal completeopt-=preview
 autocmd FileType vue call tern#Enable()
