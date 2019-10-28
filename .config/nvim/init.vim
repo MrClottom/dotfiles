@@ -94,7 +94,8 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " linting
 let g:ale_fixers = {
-\  'javascript': [ 'prettier', 'eslint'],
+\  'javascript': ['prettier', 'eslint'],
+\  'vue': ['prettier'],
 \  'python': ['autopep8']
 \}
 let g:ale_fix_on_save = 1
@@ -213,10 +214,13 @@ nnoremap <Leader>u :CtrlPUndo<CR>
 nnoremap <Leader>trn :TernRename<CR>
 nnoremap <Leader>tgd :TernDef<CR>
 
-"snippets
+" snippets
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+
+" auto pair
+let g:AutoPairsShortcutToggle=""
 
 " nerdtred
 let g:NERDTreeWinSize=40
