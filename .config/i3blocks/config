@@ -20,3 +20,8 @@ command=~/.config/i3blocks/memory/memory
 command= date '+%d.%m.%Y %H:%M'
 label=
 interval=1
+
+[battery2]
+command=~/.config/i3blocks/battery2/battery2
+markup=pango
+interval=5
