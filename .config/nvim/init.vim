@@ -22,7 +22,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'davidhalter/jedi-vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'alvan/vim-closetag' 
+Plug 'alvan/vim-closetag'
 
 " linting
 Plug 'w0rp/ale'
@@ -187,11 +187,6 @@ inoremap <Leader>l <Esc>:vsp<CR><C-w><C-w>:term<CR>
 tnoremap <Leader>j <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
 noremap <Leader>j :sp<CR><C-w><C-w>:term<CR>
 inoremap <Leader>j <Esc>:sp<CR><C-w><C-w>:term<CR>
-
-" Create a new terminal in a new tab
-tnoremap <Leader>t <C-\><C-n>:tabnew<CR>:term<CR>
-noremap <Leader>t :tabnew<CR>:term<CR>
-inoremap <Leader>t <Esc>:tabnew<CR>:term<CR>
 
 " Switches back to vim mode in terminal, can then close with :q
 tnoremap <A-q> <C-\><C-n>
