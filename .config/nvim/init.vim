@@ -36,6 +36,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline' " status bar
 Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
+Plug 'goolord/neovim-haskell-syntax'
 
 " syntaxing - vim-javascript slows down vim
 Plug 'pangloss/vim-javascript'
