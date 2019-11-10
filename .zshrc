@@ -112,6 +112,7 @@ alias bf='python3 ~/Documents/Programming/Python/Misc/Brainfuck/bf.py'
 alias uu='sudo touch $(cat ~/.main-python-dir)/myutil/lol.txt; sudo rm -r $(cat ~/.main-python-dir)/myutil/*; sudo cp ~/Documents/Programming/Python/Misc/my\ util\ lib/* -r $(cat ~/.main-python-dir)/myutil'
 alias dco='docker-compose'
 alias nv='nordvpn'
+alias chs='rm *.hi *.o'
 alias sfml-compile='echo "g++ -c main.cpp -o compiled/main.o; g++ compiled/main.o -o compiled/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"'
 bindkey -v
 bindkey "^R" history-incremental-search-backward

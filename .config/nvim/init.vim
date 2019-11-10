@@ -139,6 +139,8 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let NERDTreeQuitOnOpen=1
 let g:NERDTreeExtensionHighlightColor = {}
 let g:NERDTreeExtensionHighlightColor['vue'] = '3AFFDB'
+
+" change between light and dark mode
 nnoremap <Leader>cl :set background=light<CR>
 nnoremap <Leader>cd :set background=dark<CR>
 
