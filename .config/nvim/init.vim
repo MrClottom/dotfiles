@@ -97,8 +97,13 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
 \  'vue': ['prettier'],
-\  'python': ['autopep8']
+\  'python': ['autopep8'],
 \}
+
+let g:ale_linters = {
+\  'haskell': ['hlint', 'hfmt', 'hdevtools'],
+\}
+
 let g:ale_fix_on_save = 1
 
 " basic settings
