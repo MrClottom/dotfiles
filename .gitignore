@@ -5,6 +5,7 @@
 .config/nvim/*
 !.config/nvim/UltiSnips/
 !.config/nvim/init.vim
+!Documents/Programming/Python/Cryptography/simple-aes.py
 
 
 !.gitignore
