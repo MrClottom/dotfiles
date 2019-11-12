@@ -109,6 +109,7 @@ alias piins2="pip install"
 alias py='python3.6'
 alias ipynb='python3 ~/Documents/Programming/Python/jupyter-notebooks/pyToJyp.py'
 alias bf='python3 ~/Documents/Programming/Python/Misc/Brainfuck/bf.py'
+alias aes='python3 ~/Documents/Programming/Python/Cryptography/simple-aes.py'
 alias uu='sudo touch $(cat ~/.main-python-dir)/myutil/lol.txt; sudo rm -r $(cat ~/.main-python-dir)/myutil/*; sudo cp ~/Documents/Programming/Python/Misc/my\ util\ lib/* -r $(cat ~/.main-python-dir)/myutil'
 alias dco='docker-compose'
 alias nv='nordvpn'
