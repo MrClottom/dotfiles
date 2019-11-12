@@ -5,7 +5,6 @@
 .config/nvim/*
 !.config/nvim/UltiSnips/
 !.config/nvim/init.vim
-\.config/i3blocks/config
 
 
 !.gitignore
