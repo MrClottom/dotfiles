@@ -2,6 +2,7 @@ import argparse
 from myutil.crypto import aes
 from base64 import b64encode, b64decode
 from os.path import isfile
+from os import remove as os_remove
 from getpass import getpass
 
 
@@ -39,10 +40,14 @@ def process_args(args):
         if isfile(output_file) and not args.output_file:
             print('ERROR: output target file \'{}\' already exist, if'
                   .format(output_file),
-                  'necessary please specify an output file destination using ',
-                  'the -o flag')
+                  'you would like to overwrite the file please specify an',
+                  'output file destination using the -o flag')
             return
         handle_aes(args.input_file_name, output_file, pswd, args.encrypt)
+        if args.encrypt and not args.save_input:
+            os_remove(args.input_file_name)
+            print('Successfully removed input file \'{}\''
+                  .format(args.input_file_name))
 
 
 def main():
@@ -51,6 +56,8 @@ def main():
     parser.add_argument('-e', '--encrypt', action='store_true')
     parser.add_argument('-d', '--decrypt', action='store_true')
     parser.add_argument('-o', '--output-file')
+    parser.add_argument('-s', '--save-input', action='store_true',
+                        help='keep original when encrypting a file')
 
     args = parser.parse_args()
 
