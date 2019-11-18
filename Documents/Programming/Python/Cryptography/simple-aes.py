@@ -17,6 +17,12 @@ def parse_args():
     return parser.parse_args(), parser.print_help
 
 
+def main():
+    args, print_help = parse_args()
+    if validate_basic_args(args, print_help):
+        process_args(args)
+
+
 def validate_basic_args(args, print_help):
     if args.encrypt == args.decrypt:
         print('ERROR: must either choose to encrypt or decrypt')
@@ -94,12 +100,6 @@ def process_args(args):
 
     handle_aes(args.input_file_name, output_file, pswd, args.encrypt)
     remove_input_file(args)
-
-
-def main():
-    args, print_help = parse_args()
-    if validate_basic_args(args, print_help):
-        process_args(args)
 
 
 if __name__ == '__main__':

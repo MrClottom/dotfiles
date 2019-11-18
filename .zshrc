@@ -110,6 +110,8 @@ alias uu='sudo touch $(cat ~/.main-python-dir)/myutil/lol.txt; sudo rm -r $(cat 
 alias dco='docker-compose'
 alias nv='nordvpn'
 alias chs='rm *.hi *.o'
+alias shush='echo "---DISABLED COMMAND HISTORY---"; unset HISTFILE'
+alias check-shush='echo $HISTFILE'
 alias sfml-compile='echo "g++ -c main.cpp -o compiled/main.o; g++ compiled/main.o -o compiled/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"'
 bindkey -v
 bindkey "^R" history-incremental-search-backward
