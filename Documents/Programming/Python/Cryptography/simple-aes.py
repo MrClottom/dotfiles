@@ -1,9 +1,11 @@
+from getpass import getpass
+from os import remove as os_remove
+from os.path import isfile, isdir
+from base64 import b64encode, b64decode
 import argparse
 from myutil.crypto import aes
-from base64 import b64encode, b64decode
-from os.path import isfile
-from os import remove as os_remove
-from getpass import getpass
+from myutil.file_utils import (path_to_obj, obj_to_file, compress_obj,
+                               decompress_cobj, rec_remove)
 
 
 def parse_args():
@@ -14,6 +16,10 @@ def parse_args():
     parser.add_argument('-o', '--output-file')
     parser.add_argument('-s', '--save-input', action='store_true',
                         help='save original file when encrypting a file')
+    parser.add_argument('-r', '--remove-input', action='store_true',
+                        help='toggles default for removing input file. If'
+                        + ' encrypting the default is to remove, if decrypting'
+                        + ' the default is to keep')
     return parser.parse_args(), parser.print_help
 
 
@@ -28,27 +34,43 @@ def validate_basic_args(args, print_help):
         print('ERROR: must either choose to encrypt or decrypt')
         print_help()
         return False
-    if not isfile(args.input_file_name):
+    if not isfile(args.input_file_name) and not isdir(args.input_file_name):
         print('ERROR: input_file_name \'{}\' does not exist'
               .format(args.input_file_name))
         return False
     return True
 
 
-def handle_aes(input_file, output_file, pswd, encrypt):
+def encrypt_data(input_file, output_file, pswd):
+    obj = path_to_obj(input_file)
+    data = compress_obj(obj)
+    data = aes(pswd, data, True)
+    with open(output_file, 'wb') as f:
+        f.write(data)
+    print('Successfully wrote file.')
+
+
+def decrypt_data(input_file, output_file, pswd):
     with open(input_file, 'rb') as f:
         data = f.read()
-
-    aes_data = aes(pswd.encode(), data, encrypt=encrypt)
-
-    if not aes_data and not encrypt:
+    data = aes(pswd, data, False)
+    if not data:
         print('ERROR: empty aes output, password wrong. Cancelling writing')
         return
+    data = decompress_cobj(data)
+    if output_file:
+        data['name'] = output_file
+        output_file = ''
+    obj_to_file(data, output_file)
+    print('Successfully wrote file.')
 
-    with open(output_file, 'wb') as f:
-        f.write(aes_data)
 
-    print('\nSuccessfully wrote file.')
+def handle_aes(input_file, output_file, pswd, encrypt):
+    pswd = pswd.encode()
+    if encrypt:
+        encrypt_data(input_file, output_file, pswd)
+    else:
+        decrypt_data(input_file, output_file, pswd)
 
 
 def output_target_exist(output_file, args):
@@ -62,10 +84,18 @@ def output_target_exist(output_file, args):
 
 
 def remove_input_file(args):
-    if args.encrypt and not args.save_input:
-        os_remove(args.input_file_name)
-        print('Successfully removed input file \'{}\''
-              .format(args.input_file_name))
+    if args.encrypt != args.remove_input:
+        rec_remove(args.input_file_name)
+        print('Successfully removed {} file \'{}\''
+              .format('file' if isfile(args.input_file_name) else 'folder',
+                      args.input_file_name))
+
+
+def get_password(args):
+    pswd = getpass('Password: ')
+    pswd2 = getpass('Confirm password: ') if args.encrypt else ''
+
+    return args.decrypt or pswd == pswd2, pswd
 
 
 def get_output_file_name(args):
@@ -75,15 +105,8 @@ def get_output_file_name(args):
         if args.encrypt:
             output_file = args.input_file_name + '.aes'
         else:
-            output_file = args.input_file_name.replace('.aes', '', 1)
+            output_file = ''
     return output_file
-
-
-def get_password(args):
-    pswd = getpass('Password: ')
-    pswd2 = getpass('Confirm password: ') if args.encrypt else ''
-
-    return args.decrypt or pswd == pswd2, pswd
 
 
 def process_args(args):
