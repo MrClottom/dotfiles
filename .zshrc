@@ -103,15 +103,15 @@ alias jypno="jupyter notebook"
 alias cls="clear"
 alias clss="clear; ls -a"
 alias gco="git checkout"
-alias myscrot='scrot -s ~/Pictures/Screenshots/scrotsc-%b%d-%H%M%S.png'
-alias piins="pip3 install"
-alias piins2="pip install"
-alias py='python3.6'
 alias ipynb='python3 ~/Documents/Programming/Python/jupyter-notebooks/pyToJyp.py'
 alias bf='python3 ~/Documents/Programming/Python/Misc/Brainfuck/bf.py'
+alias aes='python3 ~/Documents/Programming/Python/Cryptography/simple-aes.py'
 alias uu='sudo touch $(cat ~/.main-python-dir)/myutil/lol.txt; sudo rm -r $(cat ~/.main-python-dir)/myutil/*; sudo cp ~/Documents/Programming/Python/Misc/my\ util\ lib/* -r $(cat ~/.main-python-dir)/myutil'
 alias dco='docker-compose'
 alias nv='nordvpn'
+alias chs='rm *.hi *.o'
+alias shush='echo "---DISABLED COMMAND HISTORY---"; unset HISTFILE'
+alias check-shush='echo $HISTFILE'
 alias sfml-compile='echo "g++ -c main.cpp -o compiled/main.o; g++ compiled/main.o -o compiled/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"'
 bindkey -v
 bindkey "^R" history-incremental-search-backward

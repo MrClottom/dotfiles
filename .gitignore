@@ -5,7 +5,16 @@
 .config/nvim/*
 !.config/nvim/UltiSnips/
 !.config/nvim/init.vim
-\.config/i3blocks/config
+
+!Documents
+Documents/*
+!Documents/Programming
+Documents/Programming/*
+!Documents/Programming/Python
+Documents/Programming/Python/*
+!Documents/Programming/Python/Cryptography
+Documents/Programming/Python/Cryptography/*
+!Documents/Programming/Python/Cryptography/simple-aes.py
 
 
 !.gitignore

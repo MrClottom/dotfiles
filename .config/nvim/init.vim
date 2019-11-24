@@ -36,6 +36,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline' " status bar
 Plug 'vim-airline/vim-airline-themes'
 Plug 'machakann/vim-highlightedyank'
+Plug 'goolord/neovim-haskell-syntax'
 
 " syntaxing - vim-javascript slows down vim
 Plug 'pangloss/vim-javascript'
@@ -95,9 +96,14 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " linting
 let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
-\  'vue': ['prettier'],
-\  'python': ['autopep8']
+\  'vue': ['eslint', 'prettier'],
+\  'python': ['autopep8'],
 \}
+
+let g:ale_linters = {
+\  'haskell': ['hlint', 'hfmt', 'hdevtools'],
+\}
+
 let g:ale_fix_on_save = 1
 
 " basic settings
@@ -138,6 +144,8 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let NERDTreeQuitOnOpen=1
 let g:NERDTreeExtensionHighlightColor = {}
 let g:NERDTreeExtensionHighlightColor['vue'] = '3AFFDB'
+
+" change between light and dark mode
 nnoremap <Leader>cl :set background=light<CR>
 nnoremap <Leader>cd :set background=dark<CR>
 
