@@ -20,4 +20,5 @@ Documents/Programming/Python/Cryptography/*
 !.gitignore
 !.jupyter/
 !.zshrc
+!.pylintrc
 !.NERDTreeBookmarks
