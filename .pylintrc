@@ -140,7 +140,15 @@ disable=print-statement,
         exception-escape,
         comprehension-escape,
         missing-class-docstring,
-        logging-not-lazy
+        missing-module-docstring,
+        missing-function-docstring,
+        logging-not-lazy,
+        logging-format-interpolation,
+        too-many-arguments,
+        unused-argument,
+        invalid-name
+
+
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -303,7 +311,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=80
 
 # Maximum number of lines in a module.
 max-module-lines=1000
