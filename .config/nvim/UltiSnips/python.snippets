@@ -44,6 +44,16 @@ def $1(self):
 	return self.__$1
 endsnippet
 
+snippet sg
+@property
+def $1(self):
+	return self.__$1
+
+@$1.setter
+def $1(self, value):
+	self.__$1 = value
+endsnippet
+
 snippet sm
 @staticmethod
 endsnippet
@@ -117,3 +127,12 @@ snippet j
 with open($1, 'r') as f:
 	$2json.load(f)
 endsnippet
+
+snippet s_
+	self.__$1 = $1
+
+@property
+def $1(self):
+	return self.__$1
+endsnippet
+
