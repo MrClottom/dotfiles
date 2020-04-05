@@ -186,9 +186,9 @@ nnoremap <Leader>r :Tabmerge right<CR>
 nnoremap <Leader>m :tabm
 "
 " Create a new terminal in a vertical split
-tnoremap <Leader>l <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
-noremap <Leader>l :vsp<CR><C-w><C-w>:term<CR>
-inoremap <Leader>l <Esc>:vsp<CR><C-w><C-w>:term<CR>
+" tnoremap <Leader>l <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
+" noremap <Leader>l :vsp<CR><C-w><C-w>:term<CR>
+" inoremap <Leader>l <Esc>:vsp<CR><C-w><C-w>:term<CR>
 
 " Create a new terminal in a horizontal split
 tnoremap <Leader>j <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
