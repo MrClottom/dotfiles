@@ -150,8 +150,9 @@ nnoremap <Leader>cl :set background=light<CR>
 nnoremap <Leader>cd :set background=dark<CR>
 
 " markdown
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
+map <C-m> <Plug>MarkdownPreview
 
 
 " trailing whitespaces
@@ -199,7 +200,7 @@ inoremap <Leader>j <Esc>:sp<CR><C-w><C-w>:term<CR>
 tnoremap <A-q> <C-\><C-n>
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-m> :NERDTreeFind<CR>
+" map <C-m> :NERDTreeFind<CR>
 
 " git
 nnoremap <Leader>gs :Gstatus<CR>
