@@ -43,6 +43,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
 Plug 'jparise/vim-graphql'
+Plug 'tomlion/vim-solidity'
 
 " fileexplorer
 Plug 'scrooloose/nerdtree'
@@ -127,6 +128,7 @@ let g:airline_theme='deus'
 let g:airline_powerline_fonts=1
 syntax on
 autocmd FileType vue syntax sync fromstart " otherwise syntax gets lost when scrolling fast
+autocmd FileType solidity setlocal shiftwidth=4 softtabstop=4 expandtab
 colorscheme one
 let g:one_allow_italics = 1
 set background=dark
