@@ -1,5 +1,15 @@
 snippet c
-contract $1 {
-	$2
+contract $1 {$2
+	constructor() public {
+		$3
+	}
 }
+endsnippet
+
+snippet p
+pragma solidity ^$1;
+endsnippet
+
+snippet iz
+import '@openzeppelin/contracts/$1';
 endsnippet
