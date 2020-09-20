@@ -13,3 +13,19 @@ endsnippet
 snippet iz
 import '@openzeppelin/contracts/$1';
 endsnippet
+
+snippet co
+constructor() $1 public {$2}
+endsnippet
+
+snippet b
+// SPDX-License-Identifier: MIT
+pragma solidity ^$1;$2
+
+contract $3 {$4
+	constructor($5) public {
+		$6
+	}
+	$7
+}
+endsnippet
