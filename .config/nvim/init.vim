@@ -44,6 +44,7 @@ Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
 Plug 'jparise/vim-graphql'
 Plug 'tomlion/vim-solidity'
+Plug 'sohkai/syntastic-local-solhint'
 
 " fileexplorer
 Plug 'scrooloose/nerdtree'
