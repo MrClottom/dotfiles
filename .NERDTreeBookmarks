@@ -1,6 +1,4 @@
-myutil ~/Documents/Programming/Python/Misc/my util lib
 Snippets ~/.config/nvim/UltiSnips
 vimrc ~/.config/nvim/init.vim
 zshrc ~/.zshrc
 pylintrc ~/.pylintrc
-
