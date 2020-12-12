@@ -1,10 +1,13 @@
 /*
 !.config/
 .config/*
+!.config/regolith
 !.config/nvim/
 .config/nvim/*
 !.config/nvim/UltiSnips/
 !.config/nvim/init.vim
+.config/regolith/*
+!.config/regolith/i3
 
 !Documents
 Documents/*
@@ -17,6 +20,8 @@ Documents/Programming/Python/Cryptography/*
 !Documents/Programming/Python/Cryptography/simple-aes.py
 
 
+!regolith-theme.rasi
+!install-script.sh
 !.gitignore
 !.jupyter/
 !.zshrc
