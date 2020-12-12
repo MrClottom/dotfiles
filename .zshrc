@@ -116,6 +116,14 @@ alias check-shush='echo $HISTFILE'
 alias sfml-compile='echo "g++ -c main.cpp -o compiled/main.o; g++ compiled/main.o -o compiled/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"'
 bindkey -v
 bindkey "^R" history-incremental-search-backward
+bindkey "\e[1~"   beginning-of-line  # Linux console
+bindkey "\e[H"   beginning-of-line  # xterm
+bindkey "\eOH"   beginning-of-line  # gnome-terminal
+bindkey "\e[2~"   overwrite-mode     # Linux console, xterm, gnome-terminal
+bindkey "\e[3~"   delete-char        # Linux console, xterm, gnome-terminal
+bindkey "\e[4~"   end-of-line        # Linux console
+bindkey "\e[F"   end-of-line        # xterm
+bindkey "\eOF"   end-of-line        # gnome-terminal
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
