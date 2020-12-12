@@ -76,7 +76,7 @@ bindsym $mod+Shift+Return exec brave-browser
 bindsym $mod+Shift+c kill
 
 # rofi app and window launchers
-bindsym $mod+space exec rofi -show drun -theme regolith-theme
+bindsym $mod+space exec rofi -show drun -theme .config/regolith/regolith-theme
 bindsym $mod+Shift+space exec rofi -show run
 bindsym $mod+Ctrl+space exec rofi -show window
 
