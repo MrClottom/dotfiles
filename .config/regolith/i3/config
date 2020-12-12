@@ -54,10 +54,11 @@ set $wsWEB2   "<span font_desc='FontAwesome 11'> 2 </span><span foreground='#
 set $wsLogs   "<span font_desc='FontAwesome 11'> </span><span foreground='#b58900'></span>  "
 set $wsLogs2  "<span font_desc='FontAwesome 11'> 2 </span><span foreground='#cb4b10'></span>  "
 set $wsDB     "<span font_desc='FontAwesome 11'> </span><span foreground='#dc322f'></span>  "
-set $wsChat  " <span font_desc='FontAwesome 11'> </span><span foreground='#6c71c4'></span>  "
+set $wsChat   "<span font_desc='FontAwesome 11'> </span><span foreground='#6c71c4'></span>  "
 set $wsMusic  "<span font_desc='FontAwesome 11'> </span><span foreground='#1ed760'></span>  "
-set $wsComs  " <span font_desc='FontAwesome 11'> </span><span foreground='#808080'></span>  "
+set $wsComs   "<span font_desc='FontAwesome 11'> </span><span foreground='#808080'></span>  "
 set $wsTimer  "<span font_desc='FontAwesome 11'> </span><span foreground='#ffffff'></span>  "
+set $wsCrypto "<span font_desc='FontAwesome 11'> </span><span foreground='#11931a'></span>  "
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -76,8 +77,8 @@ bindsym $mod+Shift+c kill
 
 # rofi app and window launchers
 bindsym $mod+space exec rofi -show drun -theme regolith-theme
-bindsym $mod+Shift+space exec rofi -show run -theme regolith-theme
-bindsym $mod+Ctrl+space exec rofi -show window -theme regolith-theme
+bindsym $mod+Shift+space exec rofi -show run
+bindsym $mod+Ctrl+space exec rofi -show window
 
 # change focus
 bindsym $mod+Left focus left
@@ -102,8 +103,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # move workspace to other monitors / screens
-bindsym $mod+o move workspace to output up
-bindsym $mod+Shift+o move workspace to output up
+bindsym $mod+o move workspace to output left
 
 # toggle split orientation
 bindsym $mod+BackSpace split toggle
@@ -154,6 +154,7 @@ bindsym $mod+v workspace $wsChat
 bindsym $mod+n workspace $wsMusic
 bindsym $mod+t workspace $wsComs
 bindsym $mod+Ctrl+i workspace $wsTimer
+bindsym $mod+y workspace $wsCrypto
 
 # cycle between workspace
 bindsym $mod+Tab workspace next
@@ -189,6 +190,7 @@ bindsym $mod+Shift+v move container to workspace $wsChat
 bindsym $mod+Shift+n move container to workspace $wsMusic
 bindsym $mod+Shift+t move container to workspace $wsComs
 bindsym $mod+Shift+Ctrl+i move container to workspace $wsTimer
+bindsym $mod+Shift+y move container to workspace $wsCrypto
 
 bindsym $mod+Shift+grave move container to workspace $ws20
 

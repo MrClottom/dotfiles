@@ -116,3 +116,7 @@ alias check-shush='echo $HISTFILE'
 alias sfml-compile='echo "g++ -c main.cpp -o compiled/main.o; g++ compiled/main.o -o compiled/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"'
 bindkey -v
 bindkey "^R" history-incremental-search-backward
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
